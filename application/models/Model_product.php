@@ -11,6 +11,6 @@ class Model_product extends CI_Model
 FROM
     `product`
     INNER JOIN `user` 
-        ON (`product`.`id_user` = `user`.`id`);');
+        ON (`product`.`id_merchant` = `user`.`id`);');
     }
 }

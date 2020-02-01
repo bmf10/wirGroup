@@ -10,7 +10,12 @@ function is_merchant($header)
         $key = "ynxxmglqb8r7MyMmqfpnIQZLtUljLhHcSnT4WbJKHgSpPphqtBqgq9IZFjybb34H5Nh6NnunScwbpK1mTG6uckN6wdE7fHrykMHb";
         $token = explode(" ", $header);
 
-        $decode = JWT::decode($token[1], $key, array('HS256'));
+        try {
+            $decode = JWT::decode($token[1], $key, array('HS256'));
+        } catch (\Throwable $th) {
+            response('error', "JWT has expired, please re-login", 200);
+            exit;
+        }
 
         if ($decode->role != 2) {
             response('error', "JWT token not valid", 200);
@@ -35,7 +40,12 @@ function is_customer($header)
         $key = "ynxxmglqb8r7MyMmqfpnIQZLtUljLhHcSnT4WbJKHgSpPphqtBqgq9IZFjybb34H5Nh6NnunScwbpK1mTG6uckN6wdE7fHrykMHb";
         $token = explode(" ", $header);
 
-        $decode = JWT::decode($token[1], $key, array('HS256'));
+        try {
+            $decode = JWT::decode($token[1], $key, array('HS256'));
+        } catch (\Throwable $th) {
+            response('error', "JWT has expired, please re-login", 200);
+            exit;
+        }
 
         if ($decode->role != 1) {
             response('error', "JWT token not valid", 200);
