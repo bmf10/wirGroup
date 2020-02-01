@@ -1,0 +1,2 @@
+1. Saya bingung maksud dari pertanyaan tersebut.
+2. Sebenarnya saya masih belum terlalu paham konsep dari Dependency Injection. tapi menurut saya Dependency Injection sangat berguna untuk digunakan pengembangan seperti contoh yg saya buat, dimana saya membuat file User.php untuk mengambil data sesuai dengan parameter di index. jadi saya tidak perlu membuat file lain dan saya hanya perlu merubah parameter yang ada.

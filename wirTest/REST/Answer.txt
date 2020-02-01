@@ -1,0 +1,3 @@
+1. Disini saya membuatkan Rest API Get sederhana untuk menampilkan data-data.
+2. Hal-hal yang harusnya tidak dilakukan dengan GET adalah mengirim data yang banyak, atau pun mengirim password. akan menjadi tidak aman. menurut saya data yang get kirim, hanya digunakan untuk memberi parameter. tidak disimpan seperti halnya post.
+2. Hal-hal yang seharusnya tidak dilakukan dengan POST adalah untuk pencarian, dimana akan menyulitkan pengguna jika apa yang dicari tidak ada di URL. post lebih baik digunakan untuk login, update data, atau pun membuat data baru.
